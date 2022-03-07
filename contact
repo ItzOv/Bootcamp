@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link href="./aboutstyle.css" rel="stylesheet" />
+    <title>Contact</title>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+    </div>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+      <title>About</title>
+</head>
+<body>
+  <div class="wrapper">
+		<section>
+			<h1>Contact Form</h1>
+			<p>Pleasr fill out the form below and I'll reach you as soon as possible!</p>
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+				<input type="hidden" name="sent_to" value="itzikovi@gmail.com">
+				<fieldset>
+			<legend>Your contact information</legend>
+			<label for="firstname">Your first name:</label>
+				<input type="text" id="firstname" onchange="validateInputs()" name="firstname" required>
+        	<label for="lastname">Your last name:</label>
+				<input type="text" id="lastname" name="lastname" onchange="validateInputs()" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email"onchange="validateInputs()" name="email" required>
+			
+			<input type="date" id="birthday" onchange="validateInputs()" name="trip-start"
+			min="1950-01-01">
+			</fieldset>
+			<label for="comments">Comments:</label>
+			<textarea id="comments" name="comments" onchange="validateInputs()"></textarea>
+			<label>
+			<button type="submit" id="submit_btn"  onclick="ben()" disabled >Submit</button>
+			</form>			
+		</section>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+</body>
+</body>
+</html>
